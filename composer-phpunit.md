@@ -3,13 +3,46 @@ is a tool for dependency management in PHP. It allows you to declare the librari
 
 ---
 
+# Semantic Versioning
+vMAJOR.MINOR.PATCH
+- MAJOR version when you make incompatible API changes,
+- MINOR version when you add functionality in a backwards-compatible manner, and
+- PATCH version when you make backwards-compatible bug fixes.
+
+https://semver.org/
+
+---
+
+# Version locking and constraints
+
+```
+"symfony/symfony": "3.4.*",
+```
+Will lock your symfony framework version on 3.4 LTS 
+and `composer update` will load only bug fixes.
+
+https://getcomposer.org/doc/articles/versions.md
+
+
+---
+
 # Autoloader
 https://getcomposer.org/doc/01-basic-usage.md#autoloading
 
 ---
 
-# Beginner's guide
+# Getting started
 https://www.codementor.io/jadjoubran/php-tutorial-getting-started-with-composer-8sbn6fb6t
+
+1) `composer init` creates composer.json file
+2) adding to `composer.json`
+```
+    "autoload": {
+        "psr-4": {"App\\": "src/App"}
+    },
+```
+will generate `autoload.php` for your application classes in namespace `App`
+
 
 ---
 
